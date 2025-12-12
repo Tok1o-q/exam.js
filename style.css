@@ -1,0 +1,192 @@
+
+
+
+header {
+    background: #1f1f1f;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.6);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav a {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+nav a.active {
+    background: #3498db;
+    color: #fff;
+}
+
+
+
+
+.add-section, .search-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #4b4b4b, #2e2e2e);
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+}
+
+input, button {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #555;
+    border-radius: 6px;
+    font-size: 14px;
+    background: #1f1f1f;
+    color: #f0f0f0;
+}
+
+button {
+    background: #3498db;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #2980b9;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table th, table td {
+    border: 1px solid #444;
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background: #3a3a3a;
+    cursor: pointer;
+}
+
+footer {
+    background: #1f1f1f;
+    color: #ccc;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    margin-top: auto;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #1f1f1f, #555);
+    color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+.center-box {
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: center;       
+    align-items: flex-start;       
+    flex: 1;
+    margin-top: 80px;              
+    width: 100%;
+}
+
+main {
+    width: 90%;
+    max-width: 900px;
+    background: #1f1f1f;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.8);
+    padding: 30px;
+}
+
+#transactionsTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+
+#transactionsTable td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.delete-transaction {
+    background: #ff6f61;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.delete-transaction:hover {
+    background: #e53935;
+}
+
+form select, form button {
+    margin-top: 30px;
+    width: 250px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+
+form button:hover {
+    background: #009624;
+}
+
+form select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border-radius: 8px;
+    border: 2px solid #0b8de4;
+    font-size: 16px;
+    color: #ccc;
+    outline: none;
+    transition: all 0.3s ease;
+    background: none;
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 20px;
+}
+
+form select:hover {
+    border-color: #ff6f61;
+    box-shadow: 0 0 8px rgba(11, 141, 228, 0.3);
+}
+
+form select:focus {
+    border-color: #00c853;
+    box-shadow: 0 0 10px rgba(0, 200, 83, 0.4);
+}
+

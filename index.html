@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Бібліотека</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Головна</a></li>
+                <li><a href="books.html">Книги</a></li>
+                <li><a href="visitors.html">Відвідувачі</a></li>
+                <li><a href="vpbooks.html">Видача/повернення</a></li>
+                <li><a href="reports.html">Звіти</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="center-box">
+        <main>
+            <section class="search-section">
+                <h2>Пошук книги</h2>
+                <input type="text" id="searchMain" placeholder="Введіть назву, автора">
+                <table id="mainBooksTable">
+                    <thead>
+                        <tr>
+                            <th onclick="sortMainBooks(0)">Назва </th>
+                            <th onclick="sortMainBooks(1)">Автор </th>
+                            <th onclick="sortMainBooks(2)">Видавництво </th>
+                            <th onclick="sortMainBooks(3)">Кількість </th>
+                            <th>Дії</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </section>
+
+
+            <section class="add-section">
+                <h2>Додати нову книгу</h2>
+                <form id="addBookForm">
+                    <input type="text" id="bookTitle" placeholder="Назва" required>
+                    <input type="text" id="bookAuthor" placeholder="Автор" required>
+                    <input type="text" id="bookPublisher" placeholder="Видавництво" required>
+                    <input type="number" id="bookCount" placeholder="Кількість" min="0" required>
+                    <button type="submit">Додати книгу</button>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        Всі права фантомно не захищені.
+    </footer>
+    <script src="index.js"></script>
+</body>
+
+</html>

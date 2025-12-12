@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Звіти</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html" >Головна</a></li>
+            <li><a href="books.html">Книги</a></li>
+            <li><a href="visitors.html" >Відвідувачі </a></li>
+            <li><a href="vpbooks.html">Видача/повернення</a></li>
+            <li><a href="reports.html" class="active">Звіти</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="center-box">
+    <main>
+        <section class="reports-section">
+            <h2>Звіти бібліотеки</h2>
+            <div class="report-options">
+                <button id="reportBooks">Звіт по книгах</button>
+                <button id="reportVisitors">Звіт по відвідувачах</button>
+                <button id="reportTransactions">Звіт по операціях</button>
+            </div>
+
+            <div id="reportResult" class="report-result">
+                
+            </div>
+        </section>
+    </main>
+</div>
+
+<footer>
+    Всі права фантомно не захищені.
+</footer>
+
+<script src="./reports.js"></script>
+</body>
+</html>

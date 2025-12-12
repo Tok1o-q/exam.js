@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Робота з книгами</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="books.html" class="active">Книги</a></li>
+                <li><a href="visitors.html">Відвідувачі</a></li>
+                <li><a href="vpbooks.html">Видача/повернення</a></li>
+                <li><a href="reports.html">Звіти</a></li>
+            </ul>
+        </nav>
+    </header>
+        <div class="center-box">
+            <main>
+
+                <section class="books-search">
+                    <h2>Розширений пошук книг</h2>
+                    <div class="search-filters">
+                        <input type="text" id="searchTitle" placeholder="Назва книги">
+                        <input type="text" id="searchAuthor" placeholder="Автор">
+                        <input type="text" id="searchPublisher" placeholder="Видавництво">
+                        <input type="number" id="minCount" placeholder="Мін. кількість" min="0">
+                        <input type="number" id="maxCount" placeholder="Макс. кількість" min="0">
+                        <button id="applyFilters">Застосувати</button>
+                        <button id="resetFilters">Скинути</button>
+                    </div>
+                </section>
+
+
+                <section class="books-list">
+                    <h2>Список книг</h2>
+                    <table id="booksTable">
+                        <thead>
+                            <tr>
+                                <th>Назва</th>
+                                <th>Автор</th>
+                                <th>Видавництво</th>
+                                <th>Кількість</th>
+                                <th>Дії</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </section>
+            </main>
+        </div>
+
+    <footer>
+        Всі права фантомно не захищені.
+    </footer>
+
+        <script src="index.js"></script>
+</body>
+
+</html>
