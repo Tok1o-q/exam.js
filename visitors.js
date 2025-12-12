@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', () => {
     loadVisitors();
 
@@ -9,13 +10,22 @@ document.addEventListener('DOMContentLoaded', () => {
             let phone = document.getElementById('visitorPhone').value.trim();
             let purpose = document.getElementById('visitorPurpose').value.trim();
 
-            if (name && phone && purpose) {
-                saveVisitor(name, phone, purpose);
-                this.reset();
-                loadVisitors();
-            } else {
+            // Перевірка номера телефону (тільки цифри, довжина 10-13 символів)
+            const phoneRegex = /^\+?\d{10,13}$/;
+
+            if (!name || !phone || !purpose) {
                 alert('Заповніть усі поля!');
+                return;
             }
+
+            if (!phoneRegex.test(phone)) {
+                alert('Некоректний номер телефону! Введіть 10-13 цифр, можна з + на початку.');
+                return;
+            }
+
+            saveVisitor(name, phone, purpose);
+            this.reset();
+            loadVisitors();
         });
     }
 
@@ -101,7 +111,14 @@ function editVisitor(oldName, row) {
     let newPhone = prompt("Новий телефон:", cells[1].innerText);
     let newPurpose = prompt("Нова мета:", cells[2].innerText);
 
+    const phoneRegex = /^\+?\d{10,13}$/;
+
     if (newName && newPhone && newPurpose) {
+        if (!phoneRegex.test(newPhone)) {
+            alert('Некоректний номер телефону! Введіть 10-13 цифр, можна з + на початку.');
+            return;
+        }
+
         cells[0].innerText = newName;
         cells[1].innerText = newPhone;
         cells[2].innerText = newPurpose;
